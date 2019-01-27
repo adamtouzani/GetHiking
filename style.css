@@ -238,6 +238,7 @@ h1 {
     /* background-color: black; */
 }
 
+
 .flex-container {
     display: flex;
     align-content: center;
@@ -245,11 +246,25 @@ h1 {
     flex-flow: row wrap;
 }
 
+.flex-container-block {
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    align-items: flex
+}
+
 .flex-box {
     max-width: 200px;
     padding: .1rem .75rem .1rem .75rem;
     margin: .25rem .25rem .25rem .25rem;
     align-self: center;
+}
+
+.flex-box-block {
+    max-width: 500px;
+    padding: .1rem .75rem .1rem .75rem;
+    margin: .25rem .25rem .25rem .25rem;
 }
 
 .flex-box-text {
@@ -260,6 +275,10 @@ h1 {
     text-align: left;
 }
 
+.img-control {
+    height: 200px;
+    border-radius: 50%
+}
 .section-dark .flex-box-text, .section-dark h1 {
     color: white;
 }
@@ -294,6 +313,12 @@ h3.flex-header {
     font-size: 1.75rem;
     padding: 0 0 0 20px;
     margin: 5px 30px 15px 30px;
+}
+
+h3.flex-header-block {
+    font-size: 1.75rem;
+    padding: 0;
+    margin: 5px 0 5px 0;
 }
 
 .flex-p {
