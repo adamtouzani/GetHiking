@@ -36,17 +36,26 @@ h1 {
     height: 80%;
     width: 100vw;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
+
+
 .navbar-links {
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     display: inline;
     position: absolute;
     float: right;
     right: 20px;
 }
+
 
 .navbar-link:link, .navbar-link:visited {
     margin-right: 5px;
@@ -57,6 +66,23 @@ h1 {
     color: white;
     text-decoration: none;
     transition: color .15s ease-in, background-color .15s ease-in;
+}
+
+@media only screen and (max-width: 450px) {
+    .navbar-links {
+        font-size: 0.8rem;
+    }
+
+    .navbar-link:link, .navbar-link:visited {
+        margin-right: 5px;
+        text-align: center;
+        border: 1.5px solid white;
+        padding: 7.5px 15px 7.5px 15px;
+        border-radius: 30px;
+        color: white;
+        text-decoration: none;
+        transition: color .15s ease-in, background-color .15s ease-in;
+    }
 }
 
 .navbar-link:hover {
@@ -72,7 +98,7 @@ h1 {
     transition: background-color 0s;
 }
 
-.active {
+.focus {
     background-color: white;
     color: black !important;
 }
@@ -82,6 +108,7 @@ h1 {
     width: 100vw;
     text-align: center;
     animation: fadein 1s;
+    /* transform: translateZ(0); */
 }
 
 .masthead-hero-img {
@@ -132,6 +159,19 @@ h1 {
     word-break: keep-all;
     font-size: 1.5rem;
     font-weight: 800;
+}
+
+@media only screen and (max-width: 450px) {
+    .masthead-content h1, .masthead-content h2, .masthead-content h3 {
+        margin: 5px 0 5px 0;
+        color: white;
+        display: block;
+        word-break: keep-all;
+        font-size: 2rem;
+    }
+    .masthead h4{
+        font-size: 1.1rem;
+    }
 }
 
 .masthead h5 {
@@ -228,7 +268,7 @@ h1 {
 h1.flex-header {
     font-size: 7rem;
     padding: 0 20px 0 0;
-    margin: -30px 30px 15px 30px;
+    margin: -10px 30px 15px 30px;
     border-bottom: 3px solid black;
     color: limegreen;
 }
@@ -240,15 +280,44 @@ h1.flex-header {
 }
 
 h3.flex-header {
-    font-size: 2rem;
+    font-size: 1.75rem;
     padding: 0 0 0 20px;
-    margin: 15px 30px 15px 30px;
+    margin: 5px 30px 15px 30px;
 }
 
 .flex-p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding: 0 0 0 20px;
     margin: 0 30px 0px 30px;
+}
+
+@media only screen and (max-width: 450px){
+    .flex-box-text {
+        min-width: 90vw;
+        padding: 0;
+        margin: 0;
+        align-self: flex-start;
+        text-align: left;
+    }
+    h3.flex-header {
+        font-size: 1.75rem;
+        padding: 0 0 0 20px;
+        margin: 5px 5px 15px 5px;
+    }
+
+    .flex-p {
+        font-size: 1.25rem;
+        padding: 0 0 0 20px;
+        margin: 0 30px 10px 30px;
+    }
+
+    h1.flex-header {
+        font-size: 6rem;
+        padding: 0 20px 0 0;
+        margin: -10px 5px 15px 5px;
+        border-bottom: 3px solid black;
+        color: limegreen;
+    }
 }
 
 .narrow-margin {
@@ -286,6 +355,37 @@ a.masthead-btn:active{
     transition: color 0s, background-color 0s;
 }
 
+.signup-form {
+    background-color: limegreen;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 25px 0 0 0;
+    width: 375px;
+    height: 300px;
+}
+
+.form-control {
+    background-color: rgba(0,0,0,0);
+    color: white;
+    padding: 10px;
+    width: 80% !important;
+    border: 1px solid white;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    font-family: 'IBM Plex Sans';
+    margin: 0 0 10px 0;
+}
+input.form-control::placeholder {
+    color: rgba(255,255,255, 0.7);
+    font-family: 'IBM Plex Sans';
+}
+
+@media only screen and (max-width: 450px) {
+    .signup-form {
+        width: 90vw;
+    }
+}
+
 .btn-link {
     border: 1.5px solid;
     border-radius: 1.5rem;
@@ -298,7 +398,7 @@ a.masthead-btn:active{
     transition: color .15s ease-in, background-color .15s ease-in;
 }
 
-.btn-success:link, .btn-success:visited{
+.btn-success, .btn-success:link, .btn-success:visited{
     border-color:  #9ACD32;
     color: #9ACD32;
 }
@@ -351,6 +451,7 @@ a.masthead-btn:active{
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-direction: normal;
+    transform: translateZ(0);
 }
 
 .all-caps {
@@ -360,29 +461,9 @@ a.masthead-btn:active{
 .spacer {
     height: 75px;
 }
-.form {
-    display: block;
-    width: 300px;
-}
 
 .btn {
 
-}
-
-.form-control {
-    background-color: rgba(0,0,0,0);
-    color: white;
-    padding: 10px;
-    width: 300px !important;
-    border: 1px solid limegreen;
-    border-radius: 1.5rem;
-    font-size: 1rem;
-    font-family: 'IBM Plex Sans';
-    margin: 0 0 10px 0;
-}
-input.form-control::placeholder {
-    color: rgba(255,255,255, 0.7);
-    font-family: 'IBM Plex Sans';
 }
 
 @keyframes scrollanimation {

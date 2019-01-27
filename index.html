@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css" />
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"
                 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -11,13 +12,15 @@
     </head>
     <body>
         <nav class="navbar">
+            <script type="text/javascript">
+                $(".navbar").hide();
+            </script>
             <div class="navbar-content">
                 <img src="gethiking_logo_wob.png" alt="GetHiking Logo" class="navbar-brand">
                 <div class="navbar-links">
-                    <a href="#" class="navbar-link active">Home</a>
-                    <a href="about.html" class="navbar-link">About Us</a>
-                    <a href="#" class="navbar-link">Sign Up</a>
-                    <a href="#" class="navbar-link">Sign In</a>
+                    <a href="#about" class="navbar-link">About Us</a>
+                    <a href="#login" class="navbar-link">Sign In</a>
+                    <a href="#signup" class="navbar-link focus">Sign Up</a>
                 </div>
             </div>
         </nav>
@@ -82,19 +85,27 @@
             </div>
         </div>
         <div class="spacer"></div>
-        <!-- <div class="section">
+        <div class="section" id="about">
+            <div class="container">
+                <h1 class="all-caps">About Us</h1>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="section">
             <div class="container">
                 <h1 class="all-caps">User Testimonials</h1>
             </div>
-        </div> -->
+        </div>
         <div class="section section-dark">
             <div class="container">
                 <h1 class="all-caps">Sign up now!</h1>
                 <div class="center">
-                    <input type="text" name="" value="" placeholder="Full name" class="form-control"><br />
-                    <input type="text" name="" value="" placeholder="Email" class="form-control"><br />
-                    <input type="password" name="" value="" placeholder="Password" class="form-control"><br />
-                    <a href="#" class="btn-link btn-success">Sign up!</a><br />
+                    <form class="signup-form" onsubmit="signup(event); return false;" action="index.html" method="post">
+                        <input type="text" name="" value="" placeholder="Full name" class="form-control"><br />
+                        <input type="text" name="" value="" placeholder="Email" class="form-control"><br />
+                        <input type="password" name="" value="" placeholder="Password" class="form-control"><br />
+                        <input type="submit" class="form-control btn-link btn-success" value="Sign up!"><br />
+                    </form>
                 </div>
             </div>
             <div class="spacer">
@@ -120,15 +131,17 @@
                     <img class="flex-box-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/2000px-YouTube_social_white_square_%282017%29.svg.png" alt="YouTube">
                 </div>
             </div>
+            <br />
             <small><a href="#">Contact Us</a> <a href="#">Terms & Conditions</a> <a href="#">Privacy Policy</a></small><br />
             <small>&copy 2019 GetHiking</small>
         </footer>
-        
+        <div class="modal">
+
+        </div>
     </body>
     <script type="text/javascript">
       $(document).ready(function () {
             $(".hidden_on_load").css({opacity: 0});
-            $(".navbar").hide();
             $("#headline1").delay(1000).animate({opacity: 1}, 600, "swing", function(){
                 $("#headline2").animate({opacity: 1}, 600, "swing", function(){
                     $("#headline3").animate({opacity: 1}, 600, "swing", function(){
@@ -138,6 +151,13 @@
                         });
                     });
                 });
+            });
+            $("nav").find("a").click(function(e) {
+                e.preventDefault();
+                var section = $(this).attr("href");
+                $("html, body").animate({
+                    scrollTop: $(section).offset().top - 70
+                }, 1500, "swing");
             });
             $(function () {
                 $(window).scroll(function () {
@@ -149,6 +169,12 @@
                 });
             });
         });
+        function signup(e){
+            e.preventDefault();
+            alert("we're here...");
+            console.log("form submit...");
+            return false;
+        }
     </script>
 
 </html>
