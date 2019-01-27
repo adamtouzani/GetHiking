@@ -1,0 +1,396 @@
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.container, .container-fluid {
+    max-width: 1160px;
+    padding: 0 2vw 0 2vw;
+    margin: 0 auto;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 70px;
+    background-color: rgba(0,0,0,0.98);
+    z-index: 9999;
+}
+
+
+.navbar-brand {
+    display: inline;
+    height: 100%;
+}
+
+.navbar-content {
+    left: 15px;
+    right: 15px;
+    position: absolute;
+    height: 80%;
+    width: 100vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar-links {
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline;
+    position: absolute;
+    float: right;
+    right: 20px;
+}
+
+.navbar-link:link, .navbar-link:visited {
+    margin-right: 5px;
+    text-align: center;
+    border: 1.5px solid white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    transition: color .15s ease-in, background-color .15s ease-in;
+}
+
+.navbar-link:hover {
+    background-color: white;
+    border: 1.5px solid white;
+    color: black;
+}
+
+.navbar-link:active {
+    background-color: #f0f0f0;
+    border: 1.5px solid #fefefe;
+    color: black;
+    transition: background-color 0s;
+}
+
+.active {
+    background-color: white;
+    color: black !important;
+}
+
+.masthead {
+    min-height: 100vh !important;
+    width: 100vw;
+    text-align: center;
+    animation: fadein 1s;
+}
+
+.masthead-hero-img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url(hiking_hero_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.6);
+}
+
+.masthead-logo {
+    padding-top: 3vh;
+    max-width: 70vw;
+}
+
+.masthead-small, .masthead a {
+    color: white
+}
+@media only screen and (min-width: 500px) {
+    .masthead-logo {
+        max-width: 25vw;
+    }
+}
+
+.masthead-content {
+    width: 100%;
+    min-height: 100vh !important;
+    z-index: 0;
+    position: absolute;
+    word-break: break-all;
+}
+
+.masthead-content h1, .masthead-content h2, .masthead-content h3 {
+    margin: 5px 0 5px 0;
+    color: white;
+    display: block;
+    word-break: keep-all;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.masthead h4{
+    margin: 10px 10px 20px 10px;
+    color: white;
+    display: block;
+    word-break: keep-all;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.masthead h5 {
+    margin: 0;
+    color: white;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.masthead h6 {
+    margin: 10px 0 0 0;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.alert {
+    padding: 15px;
+    border: 2px solid;
+    border-radius: 8px;
+    max-width: 60vw;
+    margin: 15px auto;
+    color: white;
+}
+
+.alert-info {
+    border-color: #007bff;
+    background-color: rgba(0,123,255,0.75);
+}
+
+.alert-warning {
+    border-color: #ffc107;
+    background-color: rgba(255,193,7,0.75);
+}
+
+.alert-success {
+    border-color: #28a745;
+    background-color: rgba(40,167,69,0.75);
+}
+
+.alert-danger {
+    border-color: #dc353d;
+    background-color: rgba(220,53,69,0.75);
+}
+
+.section {
+    position: relative;
+    width: 100vw !important;
+}
+
+.section-dark {
+    background-color: black;
+}
+
+.flex-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.flex-box {
+    max-width: 200px;
+    padding: .1rem .75rem .1rem .75rem;
+    margin: .25rem .25rem .25rem .25rem;
+    align-self: center;
+}
+
+.flex-box-text {
+    max-width: 33%;
+    padding: 0;
+    margin: 0;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.section-dark .flex-box-text, .section-dark h1 {
+    color: white;
+}
+
+.footer-flex-box {
+    /* margin-top: 50px; */
+    max-width: 30px;
+    padding: 0 .2rem 0 .2rem;
+    align-self: center;
+    margin-bottom: 0;
+}
+
+.flex-box-img {
+    max-width: 100%;
+}
+
+h1.flex-header {
+    font-size: 7rem;
+    padding: 0 20px 0 0;
+    margin: -30px 30px 15px 30px;
+    border-bottom: 3px solid black;
+    color: limegreen;
+}
+
+.section-dark h1 {
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+h3.flex-header {
+    font-size: 2rem;
+    padding: 0 0 0 20px;
+    margin: 15px 30px 15px 30px;
+}
+
+.flex-p {
+    font-size: 1.5rem;
+    padding: 0 0 0 20px;
+    margin: 0 30px 0px 30px;
+}
+
+.narrow-margin {
+    margin: 10px 0 10px 0;
+}
+.center {
+    text-align: center;
+}
+
+a.masthead-btn:link, a.masthead-btn:visited{
+    border: 1.5px solid #FFFFFF;
+    border-radius: 1.5rem;
+    padding: .75rem 2rem .75rem 2rem;
+    margin: .25rem 0 .25rem 0;
+    text-align: center;
+    display: inline-block;
+    min-width: 200px;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    text-decoration: none !important;
+    background-color: rgba(255,255,255,0);
+    transition: color .15s ease-in, background-color .15s ease-in;
+
+}
+
+a.masthead-btn:hover{
+    color: black;
+    background-color: #FFFFFF;
+}
+
+a.masthead-btn:active{
+    border-color: #F0F0F0;
+    color: black;
+    background-color: #F0F0F0;
+    transition: color 0s, background-color 0s;
+}
+
+.btn-link {
+    border: 1.5px solid;
+    border-radius: 1.5rem;
+    padding: .75rem 2rem .75rem 2rem;
+    margin: .25rem 0 .25rem 0;
+    text-align: center;
+    display: inline-block;
+    min-width: 200px;
+    text-decoration: none !important;
+    transition: color .15s ease-in, background-color .15s ease-in;
+}
+
+.btn-success:link, .btn-success:visited{
+    border-color:  #9ACD32;
+    color: #9ACD32;
+}
+
+.btn-danger:link, .btn-danger:visited {
+    border-color: #dc353d;
+    color: #dc353d;
+}
+
+.btn-success:hover {
+    color: white;
+    background-color: #9ACD32;
+}
+
+.btn-danger:hover {
+    background-color: #dc353d;
+    color: white;
+}
+
+.btn-success:active {
+    background-color: #9ACD32;
+    transition: background-color 0s;
+}
+
+.btn-danger:active {
+    background-color: #bf2c31;
+    transition: background-color 0s;
+}
+
+
+.footer {
+    border-top: 1px solid #DDDDDD;
+    padding: 10px 0 10px 0;
+}
+
+.footer h5 {
+    color: #CCCCCC;
+    margin: 10px 0 10px 0;
+}
+
+@media only screen and (max-width : 800px) {
+    .my_image {
+        max-width: calc(98vw - 20px);
+    }
+}
+
+.scroll-animation {
+    animation-name: scrollanimation;
+    animation-delay: 4.1s;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+.all-caps {
+    text-transform: uppercase;
+}
+
+.spacer {
+    height: 75px;
+}
+.form {
+    display: block;
+    width: 300px;
+}
+
+.btn {
+
+}
+
+.form-control {
+    background-color: rgba(0,0,0,0);
+    color: white;
+    padding: 10px;
+    width: 300px !important;
+    border: 1px solid limegreen;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    font-family: 'IBM Plex Sans';
+    margin: 0 0 10px 0;
+}
+input.form-control::placeholder {
+    color: rgba(255,255,255, 0.7);
+    font-family: 'IBM Plex Sans';
+}
+
+@keyframes scrollanimation {
+    from {opacity: 0; margin-top: 0px}
+    to {opacity: 1; margin-top: 20px}
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

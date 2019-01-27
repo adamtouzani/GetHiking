@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <title>GetHiking</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-content">
+                <img src="gethiking_logo_wob.png" alt="GetHiking Logo" class="navbar-brand">
+                <div class="navbar-links">
+                    <a href="#" class="navbar-link active">Home</a>
+                    <a href="about.html" class="navbar-link">About Us</a>
+                    <a href="#" class="navbar-link">Sign Up</a>
+                    <a href="#" class="navbar-link">Sign In</a>
+                </div>
+            </div>
+        </nav>
+        <header class="masthead">
+            <div class="masthead-hero-img"></div>
+            <div class="masthead-content">
+                <img src="gethiking_logo_wob.png" alt="GetHiking Logo" class="masthead-logo"><br />
+                <h3>EMPOWER YOUR ADVENTURE</h3>
+                <h4 id="headline1" class="hidden_on_load"><i class="fas fa-check"></i> Get your packing checklist</h4>
+                <h4 id="headline2" class="hidden_on_load"><i class="fas fa-check"></i> Get high quality gear suggestions</h4>
+                <h4 id="headline3" class="hidden_on_load"><i class="fas fa-check"></i> Get insights and advice on your trails</h4>
+                <h4 id="headline4" class="hidden_on_load"><i class="fas fa-check"></i> Get suggestions based on your current setup</h4>
+                <a href="#" class="masthead-btn hidden_on_load">Sign up now</a><br />
+                <small class="masthead-small hidden_on_load">Already a user? <a href="#">Click to login</a></small>
+                <h6 id="scroll_text" class="hidden_on_load">Scroll to find out more</h6>
+                <h5 class="scroll-animation hidden_on_load"><i id="angle_down" class="fas fa-angle-down"></i></h5>
+            </div>
+        </header>
+        <div class="section">
+            <div class="container">
+                <h1 class="all-caps">How it<br/>works</h1>
+                <div class="flex-container">
+                    <div class="flex-box-text">
+                        <h1 class="flex-header">01</h1><br />
+                        <h3 class="flex-header">Start with what you have</h3>
+                        <p class="flex-p">You first select what equipment you already have. We start with a basic list, and on the way, you'll get a better idea of what you still need to purchase, but first things first: essentials are a must!</p>
+                    </div>
+                    <div class="flex-box-text">
+                        <h1 class="flex-header">02</h1><br />
+                        <h3 class="flex-header">Choose your next adventure</h3>
+                        <p class="flex-p">Choose your destination and the period you're thinking you might what to go, so you will get the best advice, based on the weather forecast!<br />Don't where you want to go? No worries. We can provide you with a top list with hiking trails, based on your selected preferences!</p>
+                    </div>
+                    <div class="flex-box-text">
+                        <h1 class="flex-header">03</h1><br />
+                        <h3 class="flex-header">Upgrade your gear!</h3>
+                        <p class="flex-p">Based on the gear, clothes, and accesories you have, we make suggestions on what you can purchase, along with direct links to where you can buy it online, near you or near your upcoming adventure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="section">
+            <div class="container-fluid">
+                <h1 class="all-caps">Key Partners</h1>
+                <div class="flex-container">
+                    <div class="flex-box">
+                        <img class="flex-box-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Amazon_logo_plain.svg/2000px-Amazon_logo_plain.svg.png" alt="Amazon">
+                    </div>
+                    <div class="flex-box">
+                        <img class="flex-box-img" src="https://upload.wikimedia.org/wikipedia/de/thumb/c/c4/Decathlon_Logo.svg/2000px-Decathlon_Logo.svg.png" alt="Decathlon">
+                    </div>
+                    <div class="flex-box">
+                        <img class="flex-box-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Weather_Channel_logo_2005-present.svg/1200px-The_Weather_Channel_logo_2005-present.svg.png" alt="The Weather Channel">
+                    </div>
+                    <div class="flex-box">
+                        <img class="flex-box-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/TripAdvisor_logo.svg/1200px-TripAdvisor_logo.svg.png" alt="TripAdvisor">
+                    </div>
+                    <div class="flex-box">
+                        <img class="flex-box-img" src="https://www.bfn.de/fileadmin/global/templates/images/logo_bfn.gif" alt="BfN">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <!-- <div class="section">
+            <div class="container">
+                <h1 class="all-caps">User Testimonials</h1>
+            </div>
+        </div> -->
+        <div class="section section-dark">
+            <div class="container">
+                <h1 class="all-caps">Sign up now!</h1>
+                <div class="center">
+                    <input type="text" name="" value="" placeholder="Full name" class="form-control"><br />
+                    <input type="text" name="" value="" placeholder="Email" class="form-control"><br />
+                    <input type="password" name="" value="" placeholder="Password" class="form-control"><br />
+                    <a href="#" class="btn-link btn-success">Sign up!</a><br />
+                </div>
+            </div>
+            <div class="spacer">
+
+            </div>
+        </div>
+        <footer class="footer center">
+            <h5>Find us on social media</h5>
+            <div class="flex-container">
+                <div class="footer-flex-box">
+                    <img class="flex-box-img" src="https://www.brandchannel.com/wp-content/uploads/2016/05/instagram-new-logo-may-2016.jpg" alt="Instagram">
+                </div>
+                <div class="footer-flex-box">
+                    <img class="flex-box-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/600px-Facebook_logo_%28square%29.png" alt="Facebook">
+                </div>
+                <div class="footer-flex-box">
+                    <img class="flex-box-img" src="https://seeklogo.com/images/S/snapchat-logo-2D9C3E7ADA-seeklogo.com.png" alt="Snapchat">
+                </div>
+                <div class="footer-flex-box">
+                    <img class="flex-box-img" src="https://upload.wikimedia.org/wikipedia/de/thumb/9/9f/Twitter_bird_logo_2012.svg/2000px-Twitter_bird_logo_2012.svg.png" alt="Twitter">
+                </div>
+                <div class="footer-flex-box">
+                    <img class="flex-box-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/2000px-YouTube_social_white_square_%282017%29.svg.png" alt="YouTube">
+                </div>
+            </div>
+            <small><a href="#">Contact Us</a> <a href="#">Terms & Conditions</a> <a href="#">Privacy Policy</a></small><br />
+            <small>&copy 2019 GetHiking</small>
+        </footer>
+    </body>
+    <script type="text/javascript">
+      $(document).ready(function () {
+            $(".hidden_on_load").css({opacity: 0});
+            $(".navbar").hide();
+            $("#headline1").delay(1000).animate({opacity: 1}, 600, "swing", function(){
+                $("#headline2").animate({opacity: 1}, 600, "swing", function(){
+                    $("#headline3").animate({opacity: 1}, 600, "swing", function(){
+                        $("#headline4").animate({opacity: 1}, 600, "swing", function(){
+                            $(".masthead-btn, .masthead-small").delay(700).animate({opacity: 1}, 600, "swing");
+                            $("#scroll_text").delay(700).animate({opacity: 1}, 600, "swing");
+                        });
+                    });
+                });
+            });
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        $('.navbar').fadeIn();
+                    } else {
+                        $('.navbar').fadeOut();
+                    }
+                });
+            });
+        });
+    </script>
+
+</html>
