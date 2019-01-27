@@ -370,31 +370,92 @@ a.masthead-btn:active{
     background-color: limegreen;
     border-radius: 20px;
     display: inline-block;
-    padding: 25px 0 0 0;
+    font-size: 0;
+    padding: 25px 0 25px 0;
     width: 375px;
-    height: 300px;
+    /* height: 300px; */
 }
 
 .form-control {
     background-color: rgba(0,0,0,0);
     color: white;
     padding: 10px;
-    width: 80% !important;
-    border: 1px solid white;
+    width: 70% !important;
+    border: 2px solid white;
     border-radius: 1.5rem;
     font-size: 1rem;
     font-family: 'IBM Plex Sans';
     margin: 0 0 10px 0;
 }
+
+.form-input {
+    border-left: none;
+    border-radius: 0rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+.form-label {
+    color: white;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    padding: 10px;
+    padding-left: 15px;
+    border: 2px solid white;
+    border-right: none;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    font-size: 1rem;
+    margin: 0 0 10px 0;
+}
+
 input.form-control::placeholder {
     color: rgba(255,255,255, 0.7);
     font-family: 'IBM Plex Sans';
+}
+
+.btn-form, .btn-form:link, .btn-form:visited {
+    border: 2px solid white;
+    border-radius: 1.5rem;
+    padding: .75rem 2rem .75rem 2rem;
+    margin: .25rem 0 .25rem 0;
+    text-align: center;
+    display: inline-block;
+    min-width: 200px;
+    text-decoration: none !important;
+    transition: color .15s ease-in, background-color .15s ease-in;
+}
+
+.btn-form:hover {
+    color: limegreen;
+    background-color: white;
+}
+
+.btn-form:active {
+    background-color: #fafafa;
 }
 
 @media only screen and (max-width: 450px) {
     .signup-form {
         width: 90vw;
     }
+}
+
+select.form-control {
+    width: 76% !important;
+    /* padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 40px;
+    border: 2px solid white;
+    background-color: rgba(0,0,0,0); */
+    background-image: url(arrow-down-icon.png);
+    background-position: 95%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .btn-link {

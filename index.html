@@ -33,7 +33,7 @@
                 <h4 id="headline2" class="hidden_on_load"><i class="fas fa-check"></i> Get high quality gear suggestions</h4>
                 <h4 id="headline3" class="hidden_on_load"><i class="fas fa-check"></i> Get insights and advice on your trails</h4>
                 <h4 id="headline4" class="hidden_on_load"><i class="fas fa-check"></i> Get suggestions based on your current setup</h4>
-                <a href="#" class="masthead-btn hidden_on_load">Sign up now</a><br />
+                <a href="#signup" class="masthead-btn hidden_on_load">Sign up now</a><br />
                 <small class="masthead-small hidden_on_load">Already a user? <a href="#">Click to login</a></small>
                 <h6 id="scroll_text" class="hidden_on_load">Scroll to find out more</h6>
                 <h5 class="scroll-animation hidden_on_load"><i id="angle_down" class="fas fa-angle-down"></i></h5>
@@ -96,17 +96,27 @@
                 <h1 class="all-caps">User Testimonials</h1>
             </div>
         </div>
-        <div class="section section-dark">
+        <div class="section section-dark" id="signup">
             <div class="signup-hero-img"></div>
             <div class="container">
                 <h1 class="all-caps">Sign up now!</h1>
                 <div class="center">
                     <form class="signup-form" onsubmit="signup(event); return false;" action="index.html" method="post">
-                        <input type="text" name="" value="" placeholder="Full name" class="form-control"><br />
-                        <input type="text" name="" value="" placeholder="Email" class="form-control"><br />
-                        <input type="password" name="" value="" placeholder="Password" class="form-control"><br />
-                        <input type="submit" class="form-control btn-link btn-success" value="Sign up!"><br />
+                        <label for="fullname" class="form-label"><i class="fas fa-user"></i></label>
+                        <input type="text" name="fullname" value="" placeholder="Full name" class="form-control form-input"><br />
+                        <label for="country" class="form-label"><i class="fas fa-globe-africa"></i></label>
+                        <select name="country" class="form-control form-input">
+                            <option selected>Germany</option>
+                            <option>United States</option>
+                        </select><br />
+                        <label for="fullname" class="form-label"><i class="fas fa-envelope"></i></label>
+                        <input type="text" name="" value="" placeholder="Email" class="form-control form-input"><br />
+                        <label for="fullname" class="form-label"><i class="fas fa-key"></i></label>
+                        <input type="password" name="" value="" placeholder="Password" class="form-control form-input"><br />
+                        <input type="submit" class="form-control btn-form" value="Sign up!"><br />
+                        <label style="color: white; font-size:0.9rem;"><small>By clicking the button above, you agree to the <br />T&C and the Privacy Policy of GetHiking</small></label>
                     </form>
+
                 </div>
             </div>
             <div class="spacer">
@@ -153,14 +163,12 @@
                     });
                 });
             });
-            $("nav").find("a").click(function(e) {
+            $("nav, header").find("a").click(function(e) {
                 e.preventDefault();
                 var section = $(this).attr("href");
                 $("html, body").animate({
                     scrollTop: $(section).offset().top - 70
                 }, 1500, "swing");
-                $(this).blur();
-
             });
             $(function () {
                 $(window).scroll(function () {
