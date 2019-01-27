@@ -155,9 +155,7 @@
 
                 </div>
             </div>
-            <div class="spacer">
-
-            </div>
+            <div class="spacer"></div>
         </div>
         <footer class="footer center">
             <h5>Find us on social media</h5>
@@ -182,8 +180,20 @@
             <small><a href="#">Contact Us</a> <a href="#">Terms & Conditions</a> <a href="#">Privacy Policy</a></small><br />
             <small>&copy 2019 GetHiking</small>
         </footer>
-        <div class="modal">
-
+        <div class="modal" id="signin_modal">
+            <div class="modal-body">
+                <h1>Sign In</h1>
+                <div class="center">
+                    <form class="login-form" onsubmit="login(event); return false;" action="index.html" method="post">
+                        <label for="email" class="form-label"><i class="fas fa-envelope"></i></label>
+                        <input type="text" name="email" value="" placeholder="Email" class="form-control form-input"><br />
+                        <label for="password" class="form-label"><i class="fas fa-key"></i></label>
+                        <input type="password" name="password" value="" placeholder="Password" class="form-control form-input"><br />
+                        <input type="submit" class="form-control btn-form" value="Sign In"><br />
+                        <input type="button" class="form-control btn-form" value="Cancel" id="cancel_signin"><br />
+                    </form>
+                </div>
+            </div>
         </div>
     </body>
     <script type="text/javascript">
@@ -202,9 +212,13 @@
             $("nav, header").find("a").click(function(e) {
                 e.preventDefault();
                 var section = $(this).attr("href");
-                $("html, body").animate({
-                    scrollTop: $(section).offset().top - 70
-                }, 1500, "swing");
+                if (section == "#login") {
+                    $("#signin_modal").css({display: 'block'});
+                } else {
+                    $("html, body").animate({
+                        scrollTop: $(section).offset().top - 70
+                    }, 1500, "swing");
+                }
             });
             $(function () {
                 $(window).scroll(function () {
@@ -218,10 +232,13 @@
         });
         function signup(e){
             e.preventDefault();
-            alert("we're here...");
-            console.log("form submit...");
-            return false;
         }
+        function login(e){
+            e.preventDefault();
+        }
+        $("#cancel_signin").on('click', function(){
+            $("#signin_modal").css({display: 'none'});
+        })
     </script>
 
 </html>
